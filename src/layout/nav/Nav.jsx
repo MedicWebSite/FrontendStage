@@ -20,6 +20,11 @@ const Nav = () => {
           <button>Get Started</button>
           <button></button>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nobis odit ab laudantium totam aliquid repellendus amet perspiciatis voluptatum aperiam!</p>
+          <h2>Asilbek</h2>
+          <h2>Asilbek</h2>
+          <h2>Asilbek</h2>
+          <h2>Asilbek</h2>
+          <h2>Asilbek</h2>
         </div>
       </div>
     </nav>
