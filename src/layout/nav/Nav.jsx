@@ -18,7 +18,7 @@ const Nav = () => {
         </ul>
         <div className="nav__action">
           <button>Get Started</button>
-      
+
         </div>
       </div>
     </nav>
