@@ -19,6 +19,7 @@ const Nav = () => {
         <div className="nav__action">
           <button>Get Started</button>
           <button></button>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nobis odit ab laudantium totam aliquid repellendus amet perspiciatis voluptatum aperiam!</p>
         </div>
       </div>
     </nav>
