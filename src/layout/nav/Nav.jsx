@@ -1,7 +1,7 @@
 import "./Nav.scss"
 import Logo from "../../assets/images/logo.svg"
 import { NavLink } from "react-router-dom"
-
+import { useState } from "react"
 const Nav = () => {
   return (
     <nav>
