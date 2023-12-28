@@ -15,11 +15,12 @@ const Hero = () => {
                   <p>Join us and take care of yourself and your family with health services that will make you feel confident and safe in your daily life.</p>
                   <form className='hero__form'>
                     <input type="text" placeholder='Find your doctor' />
-                    <i className='location-icon'><HiOutlineLocationMarker/></i>
                     <select>
                       <option value="UZB">Uzbekistan, Toshkent</option>
-                      <option value="USA">New York, USA</option>
+                      <option value="USA">New York, USA </option>
                     </select>
+                    <i className='location-icon'><HiOutlineLocationMarker/></i>
+
                     <button><FiSearch/></button>
                   </form>
                 </div>
