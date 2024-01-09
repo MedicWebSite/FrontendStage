@@ -34,7 +34,7 @@ const Footer = () => {
         <li className="title">Subscribe newsletter</li>
         <li className="menu-item">Sign up for tips, new destinations, and exclusive promos.</li>
         <li><input type="email" placeholder="Enter your email" /></li>
-        <li><button>Subcribe</button></li>
+        <li><button className="button">Subcribe</button></li>
       </ul>
     </div>
       

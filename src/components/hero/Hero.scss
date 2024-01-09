@@ -1,7 +1,8 @@
-header{
+header {
     background-color: #edf6fa;
 }
-.hero__wrapper{
+
+.hero__wrapper {
     width: 100%;
     max-width: 1250px;
     margin: auto;
@@ -10,34 +11,39 @@ header{
     justify-content: space-between;
     margin-top: 70px;
 }
-.hero__content{
-    width: 560px;
-    h2{
-        width: 480px;
+
+.hero__content {
+    max-width: 560px;
+    h2 {
+        max-width: 540px;
         font-size: 48px;
         line-height: 70px;
         color: rgba(62, 62, 62, 1);
-        span{
+        span {
             color: var(--primary-color);
         }
     }
-    p{
+    p {
         width: 490px;
         color: rgba(117, 117, 117, 0.46);
         font-size: 15px;
         margin-top: 30px;
     }
 }
-.hero__form{
+
+.hero__form {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0px 24px;
-    width: 560px;
+    justify-content: space-around;
+    // gap: 0px 24px;
+    max-width: 600px;
     height: 90px;
     margin-top: 50px;
     background-color: #fff;
-    input, select{
+    border-radius: 20px;
+    // background-color: red;
+    input,
+    select {
         width: 216px;
         height: 60px;
         background-color: #f9fafc;
@@ -45,19 +51,22 @@ header{
         border: none;
         outline: none;
     }
-    input{
+    input {
         color: #000;
         text-indent: 10px;
         font-size: 15px;
     }
-    select{
+    input::placeholder {
+        margin-left: -50px;
+    }
+    select {
         position: relative;
         color: #000;
-        text-indent: 28px;
+        padding: 0 28px;
         font-weight: 500;
         font-size: 17px;
     }
-    button{
+    button {
         border: none;
         border-radius: 8px;
         font-size: 30px;
@@ -66,16 +75,14 @@ header{
         color: #fff;
         padding: 10px 15px;
         transition: 0.2s;
-        &:hover{
+        &:hover {
             background-color: rgb(76, 172, 255);
             cursor: pointer;
         }
     }
 }
 
-
-
-.hero__image{
+.hero__image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,18 +91,16 @@ header{
     background-image: url("../../assets/images/hero_woman_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    img{
+    img {
         padding-right: 105px;
         object-fit: cover;
     }
 }
 
-.location-icon{
-  position: absolute;
-  left: calc(23% );
-  z-index: 2;
-  font-size: 20px;
-  margin-top: 3px;
-  
+.location-icon {
+    position: static;
+    left: calc(23%);
+    z-index: 2;
+    font-size: 20px;
+    margin-top: 3px;
 }
-
