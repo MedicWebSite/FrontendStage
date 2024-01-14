@@ -4,11 +4,10 @@ header {
 
 .hero__wrapper {
     width: 100%;
-    max-width: 1250px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 70px;
 }
 
@@ -32,16 +31,17 @@ header {
 }
 
 .hero__form {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     // gap: 0px 24px;
     max-width: 600px;
     height: 90px;
     margin-top: 50px;
     background-color: #fff;
     border-radius: 20px;
-    // background-color: red;
+    padding: 0px 10px;
     input,
     select {
         width: 216px;
@@ -52,9 +52,13 @@ header {
         outline: none;
     }
     input {
+        text-indent: 15px;
         color: #000;
-        text-indent: 10px;
-        font-size: 15px;
+        text-indent: 15px;
+        font-size: 16px;
+        &:focus{
+            box-shadow: 0 0 7px  #7e9cd8;
+        }
     }
     input::placeholder {
         margin-left: -50px;
@@ -67,9 +71,12 @@ header {
         font-size: 17px;
     }
     button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: none;
         border-radius: 8px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
         background-color: var(--primary-color);
         color: #fff;
@@ -79,6 +86,9 @@ header {
             background-color: rgb(76, 172, 255);
             cursor: pointer;
         }
+        i{
+            margin-top: 2px;
+        }
     }
 }
 
@@ -86,21 +96,57 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 560px;
+    width: 530px;
     height: auto;
     background-image: url("../../assets/images/hero_woman_bg.svg");
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-size: cover;
     img {
-        padding-right: 105px;
+        width: 100%;
         object-fit: cover;
     }
 }
 
 .location-icon {
     position: static;
-    left: calc(23%);
+    left: calc(-20%);
     z-index: 2;
     font-size: 20px;
     margin-top: 3px;
+    color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 985px){
+    .hero__content{
+        max-width: 500px;
+        padding-left: 10px;
+        h2 {
+            max-width: 400px;
+            font-size: 36px;
+            line-height: 60px;
+            color: rgba(62, 62, 62, 1);
+            span {
+                color: var(--primary-color);
+            }
+        }
+        p {
+            max-width: 400px;
+            color: rgba(117, 117, 117, 0.46);
+            font-size: 15px;
+            margin-top: 30px;
+        }
+    }
+    .hero__form{
+        max-width: 500px;
+        height: 70px;
+    }
+    .hero__image{
+        width: 400px;
+        height: 400px;
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
 }
