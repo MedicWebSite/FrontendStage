@@ -2,11 +2,13 @@ import "./Nav.scss"
 import Logo from "../../assets/images/logo.svg"
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
+import { Container } from "../../utils/Utils"
 const Nav = () => {
   return (
     <nav>
-      <div className="nav__wrapper">
-        <div className="nav__logo">y
+     <Container>
+     <div className="nav__wrapper">
+        <div className="nav__logo">
           <img src={Logo} alt="Logo of Website" />
         </div>
         <ul className="nav__menu">
@@ -17,10 +19,11 @@ const Nav = () => {
           <li><NavLink className={({isActive}) => isActive ? "nav__link nav__link--active" : "nav__link"} to={"/"}>Contact Us</NavLink></li>
         </ul>
         <div className="nav__action">
-          <button>Get Started</button>
+          <button className="start-btn">Get Started</button>
 
         </div>
       </div>
+     </Container>
     </nav>
   )
 }
