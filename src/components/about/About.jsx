@@ -10,7 +10,7 @@ const About = () => {
         </div>
 
         <img src={smile} className="about-image"  />
-
+            
       </div>
   )
 }
