@@ -2,12 +2,13 @@ import "./Footer.scss"
 import Logo from "../../assets/images/logo.svg"
 import { FaInstagramSquare, FaFacebookSquare, FaYoutube, FaTwitter } from "react-icons/fa";
 import { Container } from "../../utils/Utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 
 const Footer = () => {
-  return (
+  const {pathname} = useLocation()
+  return pathname.includes("/auth") ? null : (
     <footer>
       <Container>
         <div className="footer-wrapper">

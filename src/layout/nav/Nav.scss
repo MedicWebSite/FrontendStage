@@ -36,7 +36,8 @@ nav {
 
 .nav__action {
     height: 100%;
-    .start-btn{
+    .start-link{
+        text-decoration: none;
         // height: 100%;
         padding: 13px 28px;
         background-color: var(--primary-color);
