@@ -9,6 +9,7 @@ function App() {
       <Home/>
       <About/>
       <Footer /> 
+      <h1>Hello</h1>
     </div>
   );
 }
