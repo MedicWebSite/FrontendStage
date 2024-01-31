@@ -3,12 +3,12 @@ header {
 }
 
 .hero__wrapper {
+    height: calc(100vh - 5px);
     width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 70px;
+    justify-content: space-between;
 }
 
 .hero__content {
@@ -56,8 +56,8 @@ header {
         color: #000;
         text-indent: 15px;
         font-size: 16px;
-        &:focus{
-            box-shadow: 0 0 7px  #7e9cd8;
+        &:focus {
+            box-shadow: 0 0 7px #7e9cd8;
         }
     }
     input::placeholder {
@@ -86,7 +86,7 @@ header {
             background-color: rgb(76, 172, 255);
             cursor: pointer;
         }
-        i{
+        i {
             margin-top: 2px;
         }
     }
@@ -95,15 +95,20 @@ header {
 .hero__image {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 530px;
     height: auto;
-    background-image: url("../../assets/images/hero_woman_bg.svg");
+    // background-image: url("../../assets/images/hero_woman_bg.svg");
     // background-repeat: no-repeat;
     background-size: cover;
-    img {
+    position: relative;
+    .hero__img {
         width: 100%;
         object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+    .hero__bg-img {
+        position: absolute;
     }
 }
 
@@ -116,9 +121,8 @@ header {
     color: var(--primary-color);
 }
 
-
-@media only screen and (max-width: 985px){
-    .hero__content{
+@media only screen and (max-width: 985px) {
+    .hero__content {
         max-width: 500px;
         padding-left: 10px;
         h2 {
@@ -137,16 +141,16 @@ header {
             margin-top: 30px;
         }
     }
-    .hero__form{
+    .hero__form {
         max-width: 500px;
         height: 70px;
     }
-    .hero__image{
+    .hero__image {
         width: 400px;
         height: 400px;
-        img{
+        img {
             width: auto;
-            height: 100%;
+            height: 80%;
         }
     }
 }
