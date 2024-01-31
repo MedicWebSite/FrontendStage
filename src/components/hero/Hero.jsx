@@ -2,8 +2,8 @@ import React from 'react'
 import "./Hero.scss"
 import Nav from '../../layout/nav/Nav'
 import HeroWomanImage from "../../assets/images/hero__woman.png"
+import BgImg from "../../assets/images/hero_woman_bg.svg"
 import { FiSearch } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import { Container } from '../../utils/Utils';
 
 const Hero = () => {
@@ -27,7 +27,8 @@ const Hero = () => {
                   </form>
                 </div>
                 <div className="hero__image">
-                    <img src={HeroWomanImage} />
+                    <img className='hero__bg-img' src={BgImg} alt="" />
+                    <img className='hero__img' src={HeroWomanImage} />
                 </div>
         </div>
         </Container>
