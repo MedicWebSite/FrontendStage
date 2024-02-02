@@ -25,7 +25,7 @@ const SignUp = () => {
         <input type="password" required /> <i>Password</i> 
       </div> 
 
-      <div class="links"> <Link to="/">Forgot Password</Link> <Link to="/auth/login">Signup</Link> 
+      <div class="links"> <Link to="/category">Forgot Password</Link> <Link to="/auth/login">Signup</Link> 
 
       </div> 
 
