@@ -9,7 +9,6 @@ import { Container } from '../../utils/Utils';
 const Hero = () => {
   return (
     <header>
-        <Nav/>
         <Container>
         <div className="hero__wrapper">
                 <div className="hero__content">

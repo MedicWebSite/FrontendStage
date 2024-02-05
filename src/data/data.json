@@ -1,0 +1,85 @@
+{
+    "doctors": [
+      {
+        "id": 1,
+        "name": "Dr. John Smith",
+        "specialization": "Cardiologist",
+        "image_url": "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
+        "contact": {
+          "email": "john.smith@example.com",
+          "phone": "+1234567890"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Dr. Emily Johnson",
+        "specialization": "Pediatrician",
+        "image_url": "https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1707004800&semt=sph",
+        "contact": {
+          "email": "emily.johnson@example.com",
+          "phone": "+9876543210"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Davis",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-600nw-1635029716.jpg",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Jack",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://www.shutterstock.com/image-photo/man-portrait-doctor-wearing-white-600nw-2278090533.jpg",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Jack",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Jack",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://www.shutterstock.com/image-photo/man-portrait-doctor-wearing-white-600nw-2278090533.jpg",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Jack",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Mr Royalty",
+        "specialization": "Orthopedic Surgeon",
+        "image_url": "https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg",
+        "contact": {
+          "email": "michael.davis@example.com",
+          "phone": "+1112233445"
+        }
+      }
+    ]
+  }
+  
