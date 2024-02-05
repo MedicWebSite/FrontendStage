@@ -10,11 +10,13 @@ import About from './about/About'
 import Service from './nav-service/Service'
 import Article from './article/Article'
 import ContactUs from './contact-us/ContactUs'
+import DoctorList from './doctor-list/DoctorList'
 
 const RoutController = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
+      <Route path='doctor-list' element={<DoctorList/>}/>
       <Route path='/about' element={<About />} />
       <Route path='/article' element={<Article/>}/>
       <Route path='/service' element={<Service/>}/>
