@@ -1,9 +1,11 @@
 import "./Nav.scss";
 import Logo from "../../assets/images/logo.svg";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Container } from "../../utils/Utils";
+
 const Nav = () => {
-  return (
+  const {pathname} = useLocation()
+  return pathname.includes("/auth") ?  null : (
     <nav>
      <Container>
      <div className="nav__wrapper">
@@ -20,7 +22,6 @@ const Nav = () => {
         </ul>
         <div className="nav__action">
           <Link to={"/auth/sign-up"}  className="start-link">Get Started</Link>
-
         </div>
       </div>
      </Container>
