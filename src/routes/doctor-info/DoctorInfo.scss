@@ -1,0 +1,33 @@
+.doctor-info{
+    margin-top: 50px;
+}
+
+.doctor__info-wrapper{
+    width: 100%;
+    padding: 1rem;
+}
+.doctor__info-header{
+    h2{
+        letter-spacing: 1px;
+        font-size: 34px;
+    }
+}
+
+.doctor__info-content{
+    img{
+        width: 350px;
+        border-radius: 7px;
+        height: 430px;
+        object-fit: cover;
+    }
+    .gender-text{
+        text-align: center;
+        display: block;
+        padding: 3px 45px;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        background: #fff;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+}

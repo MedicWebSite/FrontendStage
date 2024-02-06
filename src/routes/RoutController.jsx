@@ -11,6 +11,7 @@ import Service from './nav-service/Service'
 import Article from './article/Article'
 import ContactUs from './contact-us/ContactUs'
 import DoctorList from './doctor-list/DoctorList'
+import DoctorInfo from './doctor-info/DoctorInfo'
 
 const RoutController = () => {
   return (
@@ -20,6 +21,7 @@ const RoutController = () => {
       <Route path='/about' element={<About />} />
       <Route path='/article' element={<Article/>}/>
       <Route path='/service' element={<Service/>}/>
+      <Route path='/doctor-info/:id' element={<DoctorInfo/>}/>
       <Route path='/category' element={<Category/>}/>
       <Route path='/contact-us' element={<ContactUs/>}/>
       <Route path='/user' element={<User/>}/>

@@ -63,19 +63,28 @@
     padding: 1rem;
     transition: 0.2s;
     &:hover{
-        cursor: pointer;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 29px 0px;
     }
   
 }
-.message-icon{
+.connect-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    width: 40px;
+    height: 40px;
     right: 15px;
-    bottom: 7px;
+    bottom: 10px;
     background-color: transparent;
     border: none;
-    font-size: 34px;
-    color: #25d3c2;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #73d8cc;
+    cursor: pointer;
+
+    // color: #25d3c2;
 }
 .doctor-image{
     
@@ -87,9 +96,12 @@
     }
 }
 .doctor-info{
-    h3{
-        letter-spacing: 1px;
+    .doctor-name{
+        display: block;
+        text-decoration: none;
+        letter-spacing: 0.6px;
         font-size: 20px;
+        font-weight: 600;
         color: #2d2756;
         margin-bottom: 10px;
     }
@@ -104,17 +116,20 @@
         display: flex;
         align-items: center;
         column-gap: 20px;
-        font-size: 15px;
         margin-top: 10px;
-        letter-spacing: 1px;
-        color: var(--dark-color);
-        text-decoration: underline;
         cursor: pointer;
-        font-weight: 600;
+        p{
+            color: var(--dark-color);
+            text-decoration: underline;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 17px;
+
+        }
         strong{
+            font-size: 16px;
             font-style: italic;
             color: #000 !important;
-            text-decoration: none !important;
         }
      
     }
