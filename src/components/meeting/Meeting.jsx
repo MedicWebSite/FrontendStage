@@ -18,7 +18,7 @@ const Meeting = () => {
       <div className="meeting__card-container">
         <div className="meeting-card">
           <div className="image">
-            <img src={Doctor1} />
+            <Link to="/user"><img src={Doctor1} /></Link>
 
           </div>
           <p>Dr Amanda Linda </p>

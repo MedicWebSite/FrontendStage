@@ -1,14 +1,12 @@
 import './App.scss';
-import About from './components/about/About';
-import Footer from './layout/footer/Footer';
-import Home from './pages/home/Home';
+import Nav from './layout/nav/Nav';
 import RoutController from './routes/RoutController';
 
 function App() {
   return (
     <div>
+      <Nav/>
       <RoutController/>
-      <Footer /> 
     </div>
   );
 }

@@ -5,6 +5,8 @@ import OurSerive from '../../components/our-service/OurSerive'
 import Features from '../../components/features/Features'
 import About from '../../components/about/About'
 import Contact from '../../components/contact/Contact'
+import Footer from "../../layout/footer/Footer"
+import Nav from '../../layout/nav/Nav'
 
 const Home = () => {
   return (
@@ -15,6 +17,7 @@ const Home = () => {
         <Meeting/>
         <Contact/>
         <About/>
+        <Footer/> 
     </div>
   )
 }

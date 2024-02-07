@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Container } from "../../utils/Utils";
+import { Link } from "react-router-dom";
 const OurSerive = () => {
   return (
     <div className="service">
@@ -35,12 +36,14 @@ const OurSerive = () => {
             className="service-swiper"
           >
             <SwiperSlide className="service__swiper-card">
-              <img src={Heart} />
-              <h5>Cardiology</h5>
-              <p>
-                Our cardiologists are skilled at  the diagnosing and treating diseases
-                of the cardiovascular system.
-              </p>
+              <Link to="/category">
+                <img src={Heart} />
+                <h5>Cardiology</h5>
+                <p>
+                  Our cardiologists are skilled at  the diagnosing and treating diseases
+                  of the cardiovascular system.
+                </p>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="service__swiper-card">
               <img src={Lung} />
