@@ -1,10 +1,23 @@
-import "./Nav.scss";
+import NavProfle from "../nav-profle/NavProfle";
 import Logo from "../../assets/images/logo.svg";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Container } from "../../utils/Utils";
+import "./Nav.scss";
+
 
 const Nav = () => {
-  const {pathname} = useLocation()
+  const [acount, setAcount] = useState(false)
+  const {pathname} = useLocation();
+
+  useEffect(()=>{
+    if(localStorage.getItem("token")){
+      setAcount(true)
+    }
+    else{
+      setAcount(false)
+    }
+  },[pathname])
   return pathname.includes("/auth") ?  null : (
     <nav>
      <Container>
@@ -21,7 +34,11 @@ const Nav = () => {
           <li><NavLink className={({isActive}) => isActive ? "nav__link nav__link--active" : "nav__link"} to={"/contact-us"}>Contact Us</NavLink></li>
         </ul>
         <div className="nav__action">
+          {
+            acount?  <NavProfle/>
+            :
           <Link to={"/auth/sign-up"}  className="start-link">Get Started</Link>
+          }
         </div>
       </div>
      </Container>
