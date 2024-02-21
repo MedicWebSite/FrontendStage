@@ -34,11 +34,7 @@ const Nav = () => {
           <li><NavLink className={({isActive}) => isActive ? "nav__link nav__link--active" : "nav__link"} to={"/contact-us"}>Contact Us</NavLink></li>
         </ul>
         <div className="nav__action">
-          {
-            acount?  <NavProfle/>
-            :
           <Link to={"/auth/sign-up"}  className="start-link">Get Started</Link>
-          }
         </div>
       </div>
      </Container>
