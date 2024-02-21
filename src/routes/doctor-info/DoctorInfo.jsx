@@ -40,6 +40,7 @@ const DoctorInfo = () => {
                                         <div className="info-doctor">
                                             <strong>{category.specialization}</strong>
                                             <h3>{category.name}</h3>
+                                            
                                         </div>
                                         <img width={150} height={155} src={category.image_url} alt={category.name} />
                                     </div>
