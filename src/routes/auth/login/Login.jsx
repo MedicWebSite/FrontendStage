@@ -1,37 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
 
 const Login = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleLogin = () => {
+
+    }
   return (
-    <div class="signin"> 
-
-    <div class="content"> 
-
-     <Link className='login__title' to={"/"}>Sign In</Link> 
-
-     <div class="form"> 
-
-      <div class="inputBox"> 
-        <input type="text" required /> <i>Phone number</i> 
-      </div> 
-
-      <div class="inputBox"> 
-        <input type="password" required /> <i>Password</i> 
-      </div> 
-
-      <div class="links"> <Link to="/">Forgot Password</Link> <Link to="/auth/sign-up">Signup</Link> 
-
-      </div> 
-
-      <div class="inputBox"> 
-        <input type="submit" value={"Login"} />
-      </div> 
-
-     </div> 
-
-    </div> 
-
-   </div> 
+    <div>
+         <div className="auth-wrapper">
+      <h2>Login</h2>
+      <form onSubmit={handleLogin} className='auth-form'>
+        <input  value={email} onChange={(e) => setEmail(e.target.value)} className='register-input' type="email" placeholder='Email' />
+        <input  value={password} onChange={(e) => setPassword(e.target.value)} className='register-input' type="password" placeholder='Password' />
+        <div className="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </div>
+    </div>
   )
 }
 
