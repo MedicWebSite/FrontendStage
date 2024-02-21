@@ -6,8 +6,8 @@ import { Container } from '../../utils/Utils'
 import "./DoctorInfo.scss"
 
 const DoctorInfo = () => {
-    
     const { id } = useParams()
+    
     const [infoData, setInfoData] = useState(Data.doctors)
     console.log(Data.doctors);
 
