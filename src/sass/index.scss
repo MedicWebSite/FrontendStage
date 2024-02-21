@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-// body {
-// }
+input[type=number]::-webkit-inner-spin-button{
+    appearance: none;
+}
 
 @import "./root";
 @import "./font"
