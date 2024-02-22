@@ -13,12 +13,13 @@ const Hero = () => {
         <div className="hero__wrapper">
 
         <div className="hero__content">
-                  <h2>Find And Search Your <span> Suitable Doctor’s</span></h2>
-                  <p>Join us and take care of yourself and your family with health services that will make you feel confident and safe in your daily life.</p>
+                  <h2>A community of mutual assistance between scientists from all over the world</h2>
+                  <p>A convenient service that will select colleagues for you and help you establish mutually beneficial cooperation with them in the areas of joint research, co-authorship, reviewing and increasing the citation index.</p>
+                  <button>Join</button>
           </div>
 
             <div className="hero-img__wrapper">
-              <img src={BgImg} alt="" />
+              <img src={BgImg} alt="Hero Banner" />
             </div>
         </div>
         </Container>

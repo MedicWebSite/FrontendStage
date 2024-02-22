@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ValidationModal from '../../../components/validation-modal/ValidationModal';
+import ApiInstance from '../../../api';
 
 
 const EmailValidate = () => {
   const  [validationEmail, setValidationEmail] = useState('')
   const [openModal, setOpenModal] = useState(false)
-  console.log(validationEmail);
 
-  const handleValidateEmail = (e) => {
+  
+  const handleValidateEmail = async (e) => {
     e.preventDefault();
-    fetch(`http://147.45.103.204:4040/api/auth/register/send-code?mail=${validationEmail}`, { method: "POST" })
-      .then(res => res.json())
-      .then(data => {
+    try {
+      const response = await ApiInstance.post(`/auth/register/send-code?mail=${validationEmail}`)
+      if(response.status === 200){
+        console.log(response);
         setOpenModal(true)
-        if(data.statusCode === 200){
-          localStorage.setItem("validate-email",  validationEmail)
-        }
-        else{
-          console.log("Something went wrong !!!");
-        }
-      })
-      .catch(err => console.log('Error' + err))
+        localStorage.setItem("validate-email",  validationEmail)
+      }
+    } 
+    catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -39,6 +39,7 @@ const EmailValidate = () => {
       <ValidationModal openModal={openModal} setOpenModal={setOpenModal}/>
     </>
   )
+
 }
 
 export default EmailValidate
