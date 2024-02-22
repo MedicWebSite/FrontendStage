@@ -1,14 +1,12 @@
 nav {
     width: 100%;
-    // height: 50px;
-    padding: 8px 0;
+    padding: 6px 0;
     position: sticky;
     background-color: #fff;
-    z-index: 3;
+    z-index: 2  ;
     top: 0;
     overflow: hidden;
-    // background-color: #edf6fa;
-    box-shadow: rgba(63, 62, 62, 0.35) 0px 3px 10px;
+    box-shadow: rgba(63, 62, 62, 0.178) 0px 3px 7px;
 }
 
 .text {
@@ -46,8 +44,7 @@ nav {
     height: 100%;
     .start-link {
         text-decoration: none;
-        // height: 100%;
-        padding: 12px 28px;
+        padding: 10px 26px;
         background-color: var(--primary-color);
         color: #fff;
         font-size: 17px;

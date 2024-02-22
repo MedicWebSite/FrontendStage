@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import ApiInstance from '../../../api';
 
 const SignUp = () => {
   const [firstname, setFirstname] = useState('')
@@ -10,33 +11,24 @@ const SignUp = () => {
   const navigate = useNavigate()
 
 
-  const handleRegisterUser = (e) => {
+  const handleRegisterUser = async (e) => {
     e.preventDefault()
-    console.log(firstname, lastname, email, password, dateOfBirth);
-    fetch('http://147.45.103.204:4040/api/auth/register', {
-      method: "POST",
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        firstname: firstname,
-        lastname, lastname,
-        email: email,
-        password: password,
-        dateOfBirth: dateOfBirth
-      })
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.statusCode) {
-          console.log(data);
-          setTimeout(() => { navigate('/auth/email-validate') }, 3000)
-        }
-        else {
-          alert('Something went wrong !!!')
-        }
-      })
-
+    const NewUser = {
+      firstname: firstname,
+      lastname, lastname,
+      email: email,
+      password: password,
+      dateOfBirth: dateOfBirth
+    }
+    try {
+      const response = await ApiInstance.post('/auth/register', NewUser)
+      if (response.status === 200) {
+        setTimeout(() => { navigate('/auth/email-validate') }, 2500)
+      }
+    }
+    catch (error) {
+      console.log(error);
+    }
   }
 
 
@@ -47,12 +39,12 @@ const SignUp = () => {
       <h2>Sign Up</h2>
       <form onSubmit={handleRegisterUser} className='auth-form'>
         <div className="fullname-container">
-          <input value={firstname} onChange={(e) => setFirstname(e.target.value)}  className='register-input' type="text" placeholder='Firstname' />
-          <input  value={lastname} onChange={(e) => setLastname(e.target.value)} className='register-input' type="text" placeholder='Lastname' />
+          <input value={firstname} onChange={(e) => setFirstname(e.target.value)} className='register-input' type="text" placeholder='Firstname' />
+          <input value={lastname} onChange={(e) => setLastname(e.target.value)} className='register-input' type="text" placeholder='Lastname' />
         </div>
-        <input  value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} className='register-input' type="date" placeholder='Date of birth' />
-        <input  value={email} onChange={(e) => setEmail(e.target.value)} className='register-input' type="email" placeholder='Email' />
-        <input  value={password} onChange={(e) => setPassword(e.target.value)} className='register-input' type="password" placeholder='Password' />
+        <input value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} className='register-input' type="date" placeholder='Date of birth' />
+        <input value={email} onChange={(e) => setEmail(e.target.value)} className='register-input' type="email" placeholder='Email' />
+        <input value={password} onChange={(e) => setPassword(e.target.value)} className='register-input' type="password" placeholder='Password' />
         <div className="field btn">
           <div class="btn-layer"></div>
           <input type="submit" value="Signup" />
