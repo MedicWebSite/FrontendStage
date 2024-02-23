@@ -12,6 +12,7 @@ import Article from './article/Article'
 import ContactUs from './contact-us/ContactUs'
 import DoctorList from './doctor-list/DoctorList'
 import DoctorInfo from './doctor-info/DoctorInfo'
+import AdminSideBar from '../layout/admin-sidebar/AdminSideBar'
 
 const RoutController = () => {
   return (
@@ -29,6 +30,8 @@ const RoutController = () => {
         <Route path='sign-up' element={<SignUp />} />
         <Route index path='login' element={<Login />} />
       </Route>
+
+      <Route path='/admin' element={<AdminSideBar/>} />
     </Routes>
   )
 }
