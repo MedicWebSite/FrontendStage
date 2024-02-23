@@ -12,6 +12,7 @@ import Article from './article/Article'
 import ContactUs from './contact-us/ContactUs'
 import DoctorList from './doctor-list/DoctorList'
 import DoctorInfo from './doctor-info/DoctorInfo'
+import AdminSideBar from '../layout/admin-sidebar/AdminSideBar'
 import Login from './auth/login/Login'
 
 const RoutController = () => {
@@ -31,6 +32,8 @@ const RoutController = () => {
         <Route  path='email-validate' element={<EmailValidate />} />
         <Route index path='login' element={<Login/>} />
       </Route>
+
+      <Route path='/admin' element={<AdminSideBar/>} />
     </Routes>
   )
 }

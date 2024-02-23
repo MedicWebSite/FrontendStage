@@ -5,7 +5,7 @@ import RoutController from './routes/RoutController';
 function App() {
   return (
     <div>
-      <Nav/>
+      {/* <Nav/> */}
       <RoutController/>
     </div>
   );

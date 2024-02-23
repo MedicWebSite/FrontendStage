@@ -1,0 +1,24 @@
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper.MuiDrawer-paperAnchorLeft {
+    background-color: #2549db !important;
+    color: #fff;
+}
+
+.adimin-bar-menu ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0px 10px 20px 10px;
+    flex-direction: column;
+    list-style: none;
+}
+
+.adimin-bar-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    // justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
