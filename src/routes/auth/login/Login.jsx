@@ -1,38 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import ApiInstance from '../../../api'
 
 const Login = () => {
-  return (
-    <div class="signin"> 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    <div class="content"> 
+    const handleLogin = async (e) => {
+        e.preventDefault()
 
-     <Link className='login__title' to={"/"}>Sign In</Link> 
+        const UserData = { email: email, password: password }
+        
+        try {
+            const response = await ApiInstance.post('/auth/login', UserData)
+            console.log(response);
+        }
+        catch (error) {
+            console.log(error);
+        }
 
-     <div class="form"> 
-
-      <div class="inputBox"> 
-        <input type="text" required /> <i>Phone number</i> 
-      </div> 
-
-      <div class="inputBox"> 
-        <input type="password" required /> <i>Password</i> 
-      </div> 
-
-      <div class="links"> <Link to="/">Forgot Password</Link> <Link to="/auth/sign-up">Signup</Link> 
-
-      </div> 
-
-      <div class="inputBox"> 
-        <input type="submit" value={"Login"} />
-      </div> 
-
-     </div> 
-
-    </div> 
-
-   </div> 
-  )
+    }
+    return (
+        <div>
+            <div className="auth-wrapper">
+                <h2>Login</h2>
+                <form onSubmit={handleLogin} className='auth-form'>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} className='register-input' type="email" placeholder='Email' />
+                    <input value={password} onChange={(e) => setPassword(e.target.value)} className='register-input' type="password" placeholder='Password' />
+                    <div className="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    )
 }
 
 export default Login

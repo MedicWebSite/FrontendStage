@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from '../pages/home/Home'
-import Login from './auth/login/Login'
+import EmailValidate from '../routes/auth/email-validate/EmailValidate'
 import SignUp from './auth/sign-up/SignUp'
 import Auth from '../routes/auth/Auth'
 import { Route, Routes } from 'react-router-dom'
@@ -13,6 +13,7 @@ import ContactUs from './contact-us/ContactUs'
 import DoctorList from './doctor-list/DoctorList'
 import DoctorInfo from './doctor-info/DoctorInfo'
 import AdminSideBar from '../layout/admin-sidebar/AdminSideBar'
+import Login from './auth/login/Login'
 
 const RoutController = () => {
   return (
@@ -28,7 +29,8 @@ const RoutController = () => {
       <Route path='/user' element={<User/>}/>
       <Route path='auth' element={<Auth />}>
         <Route path='sign-up' element={<SignUp />} />
-        <Route index path='login' element={<Login />} />
+        <Route  path='email-validate' element={<EmailValidate />} />
+        <Route index path='login' element={<Login/>} />
       </Route>
 
       <Route path='/admin' element={<AdminSideBar/>} />
