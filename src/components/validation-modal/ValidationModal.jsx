@@ -6,7 +6,7 @@ const ValidationModal = ({ openModal }) => {
   const validateEmail = localStorage.getItem("validate-email")
   // ------ HOOKS ------------
   const [code, setCode] = useState('');
-  console.log(Number(code));
+  console.log(code);
 
   const inputRefs = [
     useRef(),
@@ -85,7 +85,7 @@ const ValidationModal = ({ openModal }) => {
       },
       body: JSON.stringify({
         email: validateEmail,
-        code: Number(code)
+        code: code
       })
     })
       .then(res => res.json())

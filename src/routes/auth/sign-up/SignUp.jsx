@@ -23,14 +23,14 @@ const SignUp = () => {
     try {
       const response = await ApiInstance.post('/auth/register', NewUser)
       if (response.status === 200) {
-        setTimeout(() => { navigate('/auth/email-validate') }, 2500)
+        console.log(response);
+          setTimeout(() => { navigate('/auth/email-validate') }, 2500)
       }
     }
     catch (error) {
       console.log(error);
     }
   }
-
 
 
 
