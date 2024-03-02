@@ -1,11 +1,12 @@
 import React from 'react'
 import Nav from '../../layout/nav/Nav'
+import SinglePage from '../../components/single-page/SinglePage'
 
 const User = () => {
   return (
     <div>
-        <Nav/>
-        <h1>Single User</h1>
+      <Nav />
+      <SinglePage />
     </div>
   )
 }
