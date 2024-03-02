@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .auth {
+  width: 100vw;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: center;
@@ -13,7 +14,6 @@
 .auth-wrapper{
     width: 480px;
     background-color: #fff;
-    padding: 1rem;
     padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -25,6 +25,7 @@
   }
 }
 .auth-form{
+  width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,10 +38,6 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 10px;
-    input{
-        width: 210px;
-    }
-  
 }
 
 .register-input{
@@ -99,3 +96,4 @@ form .btn{
     cursor: pointer;
   }
   
+

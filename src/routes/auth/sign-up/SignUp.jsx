@@ -46,9 +46,9 @@ const SignUp = () => {
         <input value={email} onChange={(e) => setEmail(e.target.value)} className='register-input' type="email" placeholder='Email' />
         <input value={password} onChange={(e) => setPassword(e.target.value)} className='register-input' type="password" placeholder='Password' />
         <div className="field btn">
-          <div class="btn-layer"></div>
+          <div className="btn-layer"></div>
           <input type="submit" value="Signup" />
-        </div>
+        </div>  
       </form>
     </div>
   )
