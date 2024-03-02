@@ -36,7 +36,7 @@ const SignUp = () => {
 
   return (
     <div className="auth-wrapper">
-      <h2>Sign Up</h2>
+      <h2><Link className='sine-up__title' to="/">Sign Up</Link></h2>
       <form onSubmit={handleRegisterUser} className='auth-form'>
         <div className="fullname-container">
           <input value={firstname} onChange={(e) => setFirstname(e.target.value)} className='register-input' type="text" placeholder='Firstname' />

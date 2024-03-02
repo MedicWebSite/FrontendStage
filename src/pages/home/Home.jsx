@@ -11,6 +11,7 @@ import Nav from '../../layout/nav/Nav'
 const Home = () => {
   return (
     <div>
+        <Nav/>
         <Hero/>
         <Features/>
         <OurSerive/>
