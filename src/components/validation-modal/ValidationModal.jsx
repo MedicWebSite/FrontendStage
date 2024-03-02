@@ -1,12 +1,14 @@
 import React, { useState, useRef } from "react";
 import './ValidationModal.scss'
+import ApiInstance from "../../api";
 
 const ValidationModal = ({ openModal }) => {
 
   const validateEmail = localStorage.getItem("validate-email")
+  console.log(validateEmail);
   // ------ HOOKS ------------
   const [code, setCode] = useState('');
-  console.log(Number(code));
+  console.log(code);
 
   const inputRefs = [
     useRef(),
@@ -76,21 +78,19 @@ const ValidationModal = ({ openModal }) => {
 
   // -------------- VALIDATION FUNCTION ----------------
 
-  const handleValidationCode = (e) => {
+  const handleValidationCode = async (e) => {
     e.preventDefault()
-    fetch(' http://147.45.103.204:4040/api/auth/register/verify', {
-      method: "POST",
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: validateEmail,
-        code: Number(code)
-      })
-    })
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(error => error)
+    const validateData = {
+      email: String(validateEmail),
+      code: String(code)
+    }
+    try {
+      const response = await ApiInstance.post('auth/register/verify', validateData)
+      console.log(response);
+    } 
+    catch (error) {
+      console.log(error);  
+    }
   }
   return (
     <div style={openModal ? { transform: 'scaleY(1)', transition: "0.3s" } : { transform: 'scale(0)' }} className="modal-overlay">
