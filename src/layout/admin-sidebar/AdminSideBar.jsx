@@ -73,7 +73,7 @@ export default function AdminSideBar() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <>
       <CssBaseline />
       
       <Drawer variant="permanent" open={open} className='admin-side__bar'>
@@ -109,13 +109,12 @@ export default function AdminSideBar() {
               <a href="/"><MdOutlineHelp/> {open ? "Help" : ""}</a>
             </li>
             <li>
-              <a href="/"><IoSettings/> {open ? "Settings" : ""}</a>
+              <a href="/admin/setting"><IoSettings/> {open ? "Settings" : ""}</a>
             </li>
             
           </ul>
         </div>
       </Drawer>
-
-    </Box>
+    </>
   );
 }

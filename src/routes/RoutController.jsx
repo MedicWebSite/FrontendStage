@@ -12,8 +12,9 @@ import Article from './article/Article'
 import ContactUs from './contact-us/ContactUs'
 import DoctorList from './doctor-list/DoctorList'
 import DoctorInfo from './doctor-info/DoctorInfo'
-import AdminSideBar from '../layout/admin-sidebar/AdminSideBar'
 import Login from './auth/login/Login'
+import Admin from '../pages/admin/Admin'
+import AdminSettings from '../pages/admin-settings/AdminSettings'
 
 const RoutController = () => {
   return (
@@ -33,7 +34,9 @@ const RoutController = () => {
         <Route index path='login' element={<Login/>} />
       </Route>
 
-      <Route path='/admin' element={<AdminSideBar/>} />
+      <Route path='/admin' element={<Admin/>} >
+        <Route path='setting' element={<AdminSettings/>}/>
+      </Route>
     </Routes>
   )
 }
